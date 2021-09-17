@@ -4,15 +4,47 @@
     type="text"
     value=""
     autocomplete="off"
-    #input (keyup)="keyup(input.value)"
+    #input (keyup)="keyup(input.value, 0)"
     placeholder="Digite los campos de entrada separados por una coma (,)"
     class="text"
   />
   </div>
+  <div class="centerInput">
+    <div>
+      <span>Porcentaje de error</span>
+    </div>
+    <div>
+      <input 
+      type="text"
+      value=""
+      autocomplete="off"
+      #error (keyup)="keyup(error.value, 2)"
+      placeholder="Digite  el campo error"
+      class="text"
+    />
+    </div>
+  </div>
+  <div class="centerInput">
+    <div>
+      <span>Factor de aprendizaje</span>
+    </div>
+    <div>
+      <input 
+      type="text"
+      value=""
+      autocomplete="off"
+      #error (keyup)="keyup(error.value, 1)"
+      placeholder="Digite  el campo error"
+      class="text"
+    />
+    </div>
+  </div>
   <div class="container-button">
     <input type="button" class="button" value="Buscar" (click)="clickItem()">
   </div>
-
+  <div class="description-error">
+    <span>{{information}}</span>
+  </div>
   <div class="container-machine" *ngIf="machine !== undefined">
     <div class="container-inputs">
       <div >Capa de entrada</div>
